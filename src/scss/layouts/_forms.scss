@@ -1,0 +1,90 @@
+.form {
+  &__wrapper {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2.5rem; 
+    grid-template-areas: 
+      "loan-amount loan-amount"
+      "loan-term interest-rate"
+      "calculate-btn calculate-btn";
+  }
+
+  &__row {
+    &:focus-within .input__icon svg path {
+      stroke: color(primary-hover, 3);
+    }
+  }
+
+  &__row:nth-of-type(1) {
+    grid-area: loan-amount;
+    margin-bottom: 2.5rem;
+  }
+
+  &__row:nth-of-type(2) {
+    grid-area: loan-term;
+  }
+
+  &__row:nth-of-type(3) {
+    grid-area: interest-rate;
+  }
+
+  &__row:nth-of-type(n + 2) {
+    margin-bottom: 3.5rem;
+  }
+
+  .submit__row {
+    grid-area: calculate-btn;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.input {
+  &__group {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid color(primary, 3);
+    border-radius: 4px;
+    padding: 0 2.25rem 0 2.25rem;
+    outline: none;
+    background: transparent;
+    transition: transition(input);
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+
+    &:focus {
+      border: 1px solid color(primary-hover, 3);
+    }
+  }
+}
+
+.submit {
+  &__btn {
+    display: inline-block;
+    width: 100%;
+    padding: .625rem 0;
+    border: 0;
+    border-radius: 4px;
+    outline: none;
+
+    background: color(neutral, 1);
+    cursor: pointer;
+  }
+}

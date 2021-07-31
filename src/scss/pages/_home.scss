@@ -1,0 +1,66 @@
+.loan {
+  margin: 7.5rem 0 7.5rem 0;
+
+  &__heading {
+    margin-bottom: 1.5rem;
+  }
+
+  &__subheading {
+    max-width: 605px;
+  }
+
+  &__form {
+    margin-top: 6.25rem;
+  }
+
+  &__form {
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(73, 80, 87, 0.12);
+    backdrop-filter: blur(40px);
+    background: color(primary, 5);
+  }
+}
+
+.result {
+  &__header {
+    margin-bottom: 2.5rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    grid-template-areas:
+      "monthly-payment total-interest total-amount"
+      "calc-input calc-input calc-input";
+  }
+
+  &__card:nth-of-type(1) {
+    grid-area: monthly-payment;
+  }
+  
+  &__card:nth-of-type(2) {
+    grid-area: total-interest;
+  }
+
+  &__card:nth-of-type(3) {
+    grid-area: total-amount;
+  }
+
+  &__card:nth-of-type(4) {
+    grid-area: calc-input;
+  }
+
+  &__card {
+    padding: 3rem 0 2.5rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(73, 80, 87, 0.12);
+    backdrop-filter: blur(40px);
+    background: color(primary, 5);
+  }
+
+  &__detail {
+    margin-bottom: .75rem;
+  }
+}

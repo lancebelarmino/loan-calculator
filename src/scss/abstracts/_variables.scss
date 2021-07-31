@@ -1,0 +1,75 @@
+// COLOR
+// ----------------------------------------
+//
+$color: (
+	primary: (
+		1: hsla(210, 9%, 31%, 1),
+    2: hsla(208, 7%, 46%, 1),
+    3: hsla(210, 11%, 71%, 1),
+    4: hsla(210, 17%, 98%, 1),
+    5: hsla(210, 17%, 98%, 0.5)
+ 	),
+  primary-hover: (
+    3: hsla(210, 11%, 71%, 0.5),
+  ),
+  neutral: (
+    1: hsla(210, 11%, 15%, 1),
+		2: hsla(0, 0%, 100%, 1)
+  )
+);
+
+
+
+
+// FONT-FAMILY
+// ----------------------------------------
+//
+$font-family: (
+	primary:    '"Hind Siliguri", sans-serif'
+);
+
+// FONT-SIZES
+// ----------------------------------------
+//
+$font-sizes: (
+  desktop: (
+    h1:   ( 4.5rem, 7.25rem, 0 ),
+    h2:   ( 3rem, 4.875rem, 0 ),
+    h3:   ( 1.5rem, 2.5rem, 0 ),
+    h4:   ( 1.125rem, 2rem, 0 ),
+    body: ( 1rem, 1.75rem, 0 ),
+    btn-primary:  ( 1.125rem, 1.75rem, 0 ),
+    btn-secondary:  ( 1rem, 1.75rem, 0 ),
+    form: ( 1.125rem, 1.75rem, 0 ),
+    nav:  ( 1rem, 1.625rem, 0 )
+  ),
+  mobile: (
+    h1:   ( 4.5rem, 7.25rem, 0 ),
+    h2:   ( 3rem, 4.875rem, 0 ),
+    h3:   ( 1.5rem, 2.5rem, 0 ),
+    h4:   ( 1.25rem, 2rem, 0 ),
+    body: ( .875rem, 1.25rem, 0 ),
+    btn:  ( 1.125rem, 1.75rem, 0 ),
+    form: ( 1.125rem, 1.75rem, 0 ),
+    nav:  ( 1rem, 1.625rem, 0 ),
+  )
+);
+
+// FONT-WEIGHT
+// ----------------------------------------
+//
+$font-weight: (
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+);
+
+
+
+// TRANSITIONS
+// ----------------------------------------
+//
+$transition: (
+  text:   'color 200ms ease',
+  input: 'all 400ms ease'
+)

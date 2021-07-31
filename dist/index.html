@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <header>
+    <div class="header__wrapper">
+      <img src="./assets/logo.svg" class="header__logo" alt="">
+
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__item">
+            <a href="index.html" class="header__link is-active">Loan Calculator</a>
+          </li>
+          <li class="header__item">
+            <a href="" class="header__link">Investment App</a>
+          </li>
+          <li class="header__item">
+            <a href="" class="header__link">Learn Investing</a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="" class="btn btn--login">Sign In</a>
+    </div>
+  </header>
+
+  <section class="loan">
+    <div class="container">
+      <div class="loan__wrapper">
+        <div class="loan__header">
+          <h1 class="loan__heading">Loan Calculator</h1>
+          <p class="loan__subheading">This loan calculator will help you compute your personal loan based on your own
+            budget. Fill out the amount, term, and interest rate inputs below and click calculate.</p>
+        </div>
+
+        <div class="loan__form">
+          <form action="" class="form">
+            <div class="form__wrapper">
+              <div class="form__row">
+                <label class="form__label" for="loanAmount">Loan Amount</label>
+                <div class="input__group">
+                  <span class="input__icon">
+                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.00012 1V17M8.33333 3.90912H3.33333C2.7145 3.90912 2.121 4.1773 1.68342 4.65467C1.24583 5.13203 1 5.77948 1 6.45458C1 7.12967 1.24583 7.77712 1.68342 8.25448C2.121 8.73185 2.7145 9.00003 3.33333 9.00003H6.66667C7.28551 9.00003 7.879 9.26821 8.31658 9.74558C8.75417 10.2229 9 10.8704 9 11.5455C9 12.2206 8.75417 12.868 8.31658 13.3454C7.879 13.8228 7.28551 14.0909 6.66667 14.0909H1"
+                        stroke="#ADB5BD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <input id="loanAmount" name="loanAmount" type="number" class="input__field">
+                </div>
+              </div>
+
+              <div class="form__row">
+                <label class="form__label" for="loanTerm">Loan Term</label>
+                <div class="input__group">
+                  <span class="input__icon">
+                    <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11 1V4M5 1V4M1 7H15M2.55556 3H13.4444C14.3036 3 15 3.69645 15 4.55556V15.4444C15 16.3036 14.3036 17 13.4444 17H2.55556C1.69645 17 1 16.3036 1 15.4444V4.55556C1 3.69645 1.69645 3 2.55556 3Z"
+                        stroke="#ADB5BD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <input id="loanTerm" name="loanTerm" type="number" class="input__field">
+                </div>
+              </div>
+
+              <div class="form__row">
+                <label class="form__label" for="interestRate">Interest Rate</label>
+                <div class="input__group">
+                  <span class="input__icon">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M16 2L2 16M6 3.5C6 4.88071 4.88071 6 3.5 6C2.11929 6 1 4.88071 1 3.5C1 2.11929 2.11929 1 3.5 1C4.88071 1 6 2.11929 6 3.5ZM17 14.5C17 15.8807 15.8807 17 14.5 17C13.1193 17 12 15.8807 12 14.5C12 13.1193 13.1193 12 14.5 12C15.8807 12 17 13.1193 17 14.5Z"
+                        stroke="#ADB5BD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <input id="interestRate" name="interestRate" type="number" class="input__field">
+                </div>
+              </div>
+
+              <div class="submit__row">
+                <button class="submit__btn">Calculate</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="result">
+    <div class="container">
+      <div class="result__header">
+        <h2 class="result__title">Loan Result</h2>
+        <p>Want to know how we compute your loan?</p>
+        <a href="" class="btn btn--secondary">Watch A Guide
+          <svg class="btn__icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M15.6464 9.64645C15.8417 9.45118 16.1583 9.45118 16.3536 9.64645L22.3536 15.6464C22.5488 15.8417 22.5488 16.1583 22.3536 16.3536L16.3536 22.3536C16.1583 22.5488 15.8417 22.5488 15.6464 22.3536C15.4512 22.1583 15.4512 21.8417 15.6464 21.6464L20.7929 16.5H10C9.72386 16.5 9.5 16.2761 9.5 16C9.5 15.7239 9.72386 15.5 10 15.5H20.7929L15.6464 10.3536C15.4512 10.1583 15.4512 9.84171 15.6464 9.64645Z"
+              fill="black" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M16 31C24.2843 31 31 24.2843 31 16C31 7.71573 24.2843 1 16 1C7.71573 1 1 7.71573 1 16C1 24.2843 7.71573 31 16 31ZM16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
+              fill="black" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="result__grid">
+        <div class="result__card">
+          <h4 class="result__detail">Monthly Payment</h4>
+          <h2 id="resultMonthly" class="result__amount">$ 3,719.28</h2>
+        </div>
+
+        <div class="result__card">
+          <h4 class="result__detail">Total Interest Paid</h4>
+          <h2 id="resultInterest" class="result__amount">$ 3,719.28</h2>
+        </div>
+
+        <div class="result__card">
+          <h4 class="result__detail">Total Amount Paid</h4>
+          <h2 id="resultAmount" class="result__amount">$ 3,719.28</h2>
+        </div>
+
+        <div class="calc-input">
+          <div class="calc-input__card">
+            <div class="calc-input__block">
+              <h4 class="calc-input__detail">Loan Amount</h4>
+              <h2 id="calcInputAmount" class="calc-input__detail">$ 3,719.28</h2>
+            </div>
+
+            <div class="calc-input__block">
+              <h4 class="calc-input__detail">Loan Term</h4>
+              <h2 id="calcInputTerm" class="calc-input__detail">$ 3,719.28</h2>
+            </div>
+
+            <div class="calc-input__block">
+              <h4 class="calc-input__detail">Interest Rate</h4>
+              <h2 id="calcInputInterest" class="calc-input__detail">$ 3,719.28</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./scripts/bundle.js"></script>
+</body>
+
+</html>

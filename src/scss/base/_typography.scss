@@ -1,0 +1,157 @@
+// BASE
+// ----------------------------------------
+//
+body {
+  font-family: font-family(primary);
+}
+
+h1, 
+h2, 
+h3, 
+h4,
+h5,
+h6 {
+  color: color(neutral, 1);
+  font-family: font-family(primary);
+  font-weight: font-weight(semi-bold);
+}
+
+h1 {
+  @include font-size(h1, desktop);
+
+  @include breakpoint-down(mobile) {
+    @include font-size(h1, mobile);
+  }
+}
+
+h2 {
+  @include font-size(h2, desktop);
+
+  @include breakpoint-down(mobile) {
+    @include font-size(h2, mobile);
+  }
+}
+
+h3 {
+  @include font-size(h3, desktop);
+
+  @include breakpoint-down(mobile) {
+    @include font-size(h3, mobile);
+  }
+}
+
+h4 {
+  @include font-size(h4, desktop);
+
+  @include breakpoint-down(mobile) {
+    @include font-size(h4, mobile);
+  }
+}
+
+p {
+  color: color(primary, 2);
+  font-size: font-size(body, desktop);
+  font-family: font-family(primary);
+  font-weight: font-weight(regular);
+  line-height: line-height(body, desktop);
+}
+
+a {
+  color: color(neutral, 1);
+}
+
+
+
+// COMPONENTS
+// ----------------------------------------
+// 
+.btn {
+  
+  font-family: font-family(primary);
+  font-weight: font-weight(medium);
+
+  &--primary {
+    color: (primary, 4);
+    font-size: font-size(btn-primary, desktop);
+  }
+
+  &--secondary {
+    color: (neutral, 1);
+    font-size: font-size(btn-secondary, desktop);
+  }
+
+  &--login {
+    color: (primary, 1);
+    font-size: font-size(btn-secondary, desktop);
+    font-weight: font-weight(medium);
+  }
+}
+
+
+
+// LAYOUTS
+// ----------------------------------------
+// 
+.form {
+  &__row {
+    &:focus-within .form__label {
+      color: color(primary, 2);
+    }
+  }
+
+
+  &__label {
+    color: color(primary, 3);
+    font-size: font-size(form, desktop);
+    font-family: font-family(primary);
+    font-weight: font-weight(medium);
+    transition: transition(text);
+  }
+}
+
+.input {
+  &__field {
+    &[type=number] {
+      color: color(primary, 1)
+    }
+
+    &::placeholder {
+      color: color(neutral, 1);
+    }
+  }
+}
+
+.submit {
+  &__btn {
+    color: color(primary, 4);
+    font-size: font-size(btn-primary, desktop);
+    font-weight: font-weight(medium);
+  }
+}
+
+.header {
+  &__link {
+    color: color(primary, 3);
+    font-size: font-size(nav, desktop);
+    font-family: font-family(primary);
+    font-weight: font-weight(medium);
+
+    &.is-active {
+      color: color(primary, 1);
+    }
+  }
+}
+
+
+
+// PAGES
+// ----------------------------------------
+// 
+.result {
+  &__detail {
+    color: color(primary, 3);
+    font-weight: font-weight(medium);
+  }
+
+
+}
