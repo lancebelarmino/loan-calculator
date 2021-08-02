@@ -84,6 +84,18 @@ a {
     color: (primary, 1);
     font-size: font-size(btn-secondary, desktop);
     font-weight: font-weight(medium);
+    transition: transition(text);
+
+    &:hover {
+      color: color(neutral, 1);
+    }
+  }
+}
+
+.card {
+  &__detail {
+    color: color(primary, 3);
+    font-weight: font-weight(medium);
   }
 }
 
@@ -112,7 +124,12 @@ a {
 .input {
   &__field {
     &[type=number] {
-      color: color(primary, 1)
+      color: color(primary, 3);
+      transition: transition(text);
+    }
+
+    &[type=number]:focus {
+      color: color(primary, 1);
     }
 
     &::placeholder {
@@ -135,10 +152,15 @@ a {
     font-size: font-size(nav, desktop);
     font-family: font-family(primary);
     font-weight: font-weight(medium);
+    transition: transition(text);
 
     &.is-active {
       color: color(primary, 1);
     }
+  }
+
+  &__link:hover {
+    color: color(primary, 1);
   }
 }
 
@@ -147,11 +169,8 @@ a {
 // PAGES
 // ----------------------------------------
 // 
-.result {
-  &__detail {
-    color: color(primary, 3);
+.calc-input {
+  &__title {
     font-weight: font-weight(medium);
   }
-
-
 }

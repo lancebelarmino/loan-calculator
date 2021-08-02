@@ -8,14 +8,29 @@
   &--secondary {
     display: flex;
     align-items: center;
+    
+
+    &:hover .btn__icon {
+      fill: color(primary, 1);
+      margin-left: 1.25rem;
+    }
   }
 
   &__icon {
+    fill: color(primary, 3);
     margin-left: 1rem;
+    transition: transition(btn);
   }
 
   &--login {
     padding: .5rem 2rem;
     background-color: color(primary, 4);
+    transform: translate(0);
+    transition: transition(btn);
+
+    &:hover {
+      box-shadow: 0px 4px 4px rgba(73, 80, 87, 0.08);
+      transform: translateY(-4px);
+    }
   }
 }

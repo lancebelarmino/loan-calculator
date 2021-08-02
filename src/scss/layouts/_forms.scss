@@ -9,10 +9,12 @@
       "calculate-btn calculate-btn";
   }
 
-  &__row {
-    &:focus-within .input__icon svg path {
-      stroke: color(primary-hover, 3);
-    }
+  .input__icon svg path {
+    transition: transition(input);
+  }
+
+  &__row:focus-within .input__icon svg path {
+    stroke: color(primary-hover, 3);
   }
 
   &__row:nth-of-type(1) {
@@ -83,8 +85,13 @@
     border: 0;
     border-radius: 4px;
     outline: none;
-
     background: color(neutral, 1);
     cursor: pointer;
+    transition: transition(input);
+
+    &:hover {
+      background: color(neutral-hover, 1);
+      box-shadow: 0px 4px 4px rgba(73, 80, 87, 0.08);
+    }
   }
 }
