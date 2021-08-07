@@ -19,7 +19,7 @@ h6 {
 h1 {
   @include font-size(h1, desktop);
 
-  @include breakpoint-down(mobile) {
+  @include breakpoint-down(tablet) {
     @include font-size(h1, mobile);
   }
 }
@@ -66,7 +66,6 @@ a {
 // ----------------------------------------
 // 
 .btn {
-  
   font-family: font-family(primary);
   font-weight: font-weight(medium);
 
@@ -98,7 +97,6 @@ a {
     font-weight: font-weight(medium);
   }
 }
-
 
 
 // LAYOUTS
@@ -135,6 +133,12 @@ a {
     &::placeholder {
       color: color(neutral, 1);
     }
+
+    &--error {
+      &[type=number] {
+        color: color(state, error);
+      }
+    }
   }
 }
 
@@ -153,13 +157,31 @@ a {
     font-family: font-family(primary);
     font-weight: font-weight(medium);
     transition: transition(text);
-
-    &.is-active {
-      color: color(primary, 1);
-    }
   }
 
   &__link:hover {
+    color: color(primary, 1);
+  }
+
+  & .is-active {
+    color: color(primary, 1);
+  }
+}
+
+.mobile-menu {
+  &__link {
+    color: color(primary, 3);
+    font-size: font-size(nav, desktop);
+    font-family: font-family(primary);
+    font-weight: font-weight(medium);
+    transition: transition(text);
+  }
+
+  &__link:hover {
+    color: color(primary, 1);
+  }
+
+  & .is-active {
     color: color(primary, 1);
   }
 }
@@ -169,8 +191,24 @@ a {
 // PAGES
 // ----------------------------------------
 // 
+.result {
+  &__amount {
+    color: color(primary, 1);
+  }
+}
+
 .calc-input {
+
   &__title {
+    color: color(primary, 1);
+  }
+
+  &__detail {
+    color: color(primary, 3);
     font-weight: font-weight(medium);
+  }
+
+  &__amount {
+    color: color(primary, 1);
   }
 }

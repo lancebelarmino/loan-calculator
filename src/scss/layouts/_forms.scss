@@ -17,6 +17,10 @@
     stroke: color(primary-hover, 3);
   }
 
+  &__row:focus-within .input__error-icon {
+    display: none;
+  }
+
   &__row:nth-of-type(1) {
     grid-area: loan-amount;
     margin-bottom: 2.5rem;
@@ -41,18 +45,40 @@
   &__label {
     display: block;
     margin-bottom: 1rem;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  @include breakpoint-down(mobile) {
+    &__wrapper {
+      grid-template-areas: 
+      "loan-amount loan-amount"
+      "loan-term loan-term"
+      "interest-rate interest-rate"
+      "calculate-btn calculate-btn";
+    }
+
+    &__row:nth-of-type(-n + 3) {
+      margin-bottom: 2rem;
+    }
   }
 }
 
 .input {
   &__group {
     position: relative;
+
   }
 
   &__icon {
+    stroke: color(primary, 3);
     position: absolute;
     top: 12px;
     left: 12px;
+
+    &--error {
+      stroke: color(state, error);
+    }
   }
 
   &__field {
@@ -74,6 +100,27 @@
     &:focus {
       border: 1px solid color(primary-hover, 3);
     }
+  }
+
+  &__field--error {
+    border: 1px solid color(state, error);
+    transition: transition(input);
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+
+    &:focus {
+      border: 1px solid color(primary-hover, 3);
+    }
+  }
+
+  &__error-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    transition: transition(input);
   }
 }
 

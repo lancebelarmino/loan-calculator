@@ -23,19 +23,60 @@
             <a href="index.html" class="header__link is-active">Loan Calculator</a>
           </li>
           <li class="header__item">
-            <a href="" class="header__link">Investment App</a>
+            <a href="" class="header__link">Loan App</a>
           </li>
           <li class="header__item">
-            <a href="" class="header__link">Learn Investing</a>
+            <a href="" class="header__link">Learn Loaning</a>
           </li>
         </ul>
       </nav>
 
-      <a href="" class="btn btn--login">Sign In</a>
+      <a href="" class="btn btn--login header__btn">Sign In</a>
+
+      <div class="mobile-menu">
+        <a class="mobile-menu__icon">
+          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0 1C0 0.447715 0.447715 0 1 0H19C19.5523 0 20 0.447715 20 1C20 1.55228 19.5523 2 19 2H1C0.447716 2 0 1.55228 0 1Z" />
+            <path
+              d="M0 7C0 6.44772 0.447715 6 1 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H1C0.447716 8 0 7.55228 0 7Z" />
+            <path
+              d="M0 13C0 12.4477 0.447715 12 1 12H19C19.5523 12 20 12.4477 20 13C20 13.5523 19.5523 14 19 14H1C0.447716 14 0 13.5523 0 13Z" />
+          </svg>
+        </a>
+
+        <nav class="mobile-menu__nav is-hidden">
+          <div class="mobile-menu__wrapper">
+            <div class="mobile-menu__close">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 1L1 9M1 1L9 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <ul class="mobile-menu__menu">
+              <li class="mobile-menu__item">
+                <a href="index.html" class="mobile-menu__link is-active">Loan Calculator</a>
+              </li>
+              <hr class="gray-spacer mobile-menu__spacer">
+              <li class="mobile-menu__item">
+                <a href="" class="mobile-menu__link">Loan App</a>
+              </li>
+              <hr class="gray-spacer mobile-menu__spacer">
+              <li class="mobile-menu__item">
+                <a href="" class="mobile-menu__link">Learn Loaning</a>
+              </li>
+            </ul>
+
+            <div class="mobile-menu__login">
+              <a href="" class="btn btn--login mobile-menu__btn">Sign In</a>
+            </div>
+          </div>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <section class="loan">
+  <section id="loanSection" class="loan">
     <div class="container">
       <div class="loan__wrapper">
         <div class="loan__header">
@@ -44,7 +85,7 @@
             budget. Fill out the amount, term, and interest rate inputs below and click calculate.</p>
         </div>
 
-        <div class="loan__form">
+        <div id="loanForm" class="loan__form">
           <form action="" class="form">
             <div class="form__wrapper">
               <div class="form__row">
@@ -54,7 +95,7 @@
                     <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M5.00012 1V17M8.33333 3.90912H3.33333C2.7145 3.90912 2.121 4.1773 1.68342 4.65467C1.24583 5.13203 1 5.77948 1 6.45458C1 7.12967 1.24583 7.77712 1.68342 8.25448C2.121 8.73185 2.7145 9.00003 3.33333 9.00003H6.66667C7.28551 9.00003 7.879 9.26821 8.31658 9.74558C8.75417 10.2229 9 10.8704 9 11.5455C9 12.2206 8.75417 12.868 8.31658 13.3454C7.879 13.8228 7.28551 14.0909 6.66667 14.0909H1"
-                        stroke="#ADB5BD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </span>
                   <input id="loanAmount" name="loanAmount" type="number" class="input__field">
@@ -68,7 +109,7 @@
                     <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M11 1V4M5 1V4M1 7H15M2.55556 3H13.4444C14.3036 3 15 3.69645 15 4.55556V15.4444C15 16.3036 14.3036 17 13.4444 17H2.55556C1.69645 17 1 16.3036 1 15.4444V4.55556C1 3.69645 1.69645 3 2.55556 3Z"
-                        stroke="#ADB5BD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </span>
                   <input id="loanTerm" name="loanTerm" type="number" class="input__field">
@@ -82,7 +123,7 @@
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M16 2L2 16M6 3.5C6 4.88071 4.88071 6 3.5 6C2.11929 6 1 4.88071 1 3.5C1 2.11929 2.11929 1 3.5 1C4.88071 1 6 2.11929 6 3.5ZM17 14.5C17 15.8807 15.8807 17 14.5 17C13.1193 17 12 15.8807 12 14.5C12 13.1193 13.1193 12 14.5 12C15.8807 12 17 13.1193 17 14.5Z"
-                        stroke="#ADB5BD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </span>
                   <input id="interestRate" name="interestRate" type="number" class="input__field">
@@ -102,12 +143,13 @@
     <img src="./assets/gradient-3.png" class="gradient-blob gradient-blob--3" draggable="false" aria-hidden="true">
   </section>
 
-  <!-- <section class="result">
+  <section id="resultSection" class="result is-hidden">
     <div class="container">
       <div class="result__header">
         <h2 class="result__title">Loan Result</h2>
         <p class="result__description">Want to change something or try a different scenario?</p>
-        <a href="" class="btn btn--secondary">Calculate Again
+        <a id="resetCalculator" class="btn btn--secondary">
+          Calculate Again
           <svg class="btn__icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -123,7 +165,7 @@
           <span class="result__bar result__bar--monthly"></span>
           <div class="result__content">
             <h4 class="card__detail result__detail">Monthly Payment</h4>
-            <h2 id="resultMonthly" class="result__amount">$ 3,719.28</h2>
+            <h2 id="resultMonthly" class="result__amount"></h2>
           </div>
         </div>
 
@@ -131,7 +173,7 @@
           <span class="result__bar result__bar--interest"></span>
           <div class="result__content">
             <h4 class="card__detail result__detail">Total Interest Paid</h4>
-            <h2 id="resultInterest" class="result__amount">$ 3,719.28</h2>
+            <h2 id="resultInterest" class="result__amount"></h2>
           </div>
         </div>
 
@@ -139,7 +181,7 @@
           <span class="result__bar result__bar--amount"></span>
           <div class="result__content">
             <h4 class="card__detail result__detail">Total Amount Paid</h4>
-            <h2 id="resultAmount" class="result__amount">$ 3,719.28</h2>
+            <h2 id="resultAmount" class="result__amount"></h2>
           </div>
         </div>
 
@@ -149,17 +191,17 @@
             <div class="calc-input__grid">
               <div class="calc-input__block">
                 <h4 class="card__detail calc-input__detail">Loan Term</h4>
-                <h2 id="calcInputTerm" class="calc-input__detail">$ 3,719.28</h2>
+                <h2 id="calcInputTerm" class="calc-input__amount"></h2>
               </div>
-
+              <hr class="gray-spacer calc-input__spacer">
               <div class="calc-input__block">
                 <h4 class="card__detail calc-input__detail">Loan Amount</h4>
-                <h2 id="calcInputAmount" class="calc-input__detail">$ 3,719.28</h2>
+                <h2 id="calcInputAmount" class="calc-input__amount"></h2>
               </div>
-
+              <hr class="gray-spacer calc-input__spacer">
               <div class="calc-input__block">
                 <h4 class="card__detail calc-input__detail">Interest Rate</h4>
-                <h2 id="calcInputInterest" class="calc-input__detail">$ 3,719.28</h2>
+                <h2 id="calcInputInterest" class="calc-input__amount"></h2>
               </div>
             </div>
           </div>
@@ -167,7 +209,7 @@
       </div>
     </div>
     <img src="./assets/gradient-4.png" class="gradient-blob gradient-blob--4" draggable="false" aria-hidden="true">
-  </section> -->
+  </section>
 
   <script src="./scripts/bundle.js"></script>
 </body>

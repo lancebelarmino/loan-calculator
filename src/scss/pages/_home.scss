@@ -6,6 +6,10 @@
     position: relative;
     z-index: 100;
   }
+
+  &__header {
+    margin-bottom: 7.5rem;
+  }
   
   &__heading {
     margin-bottom: 1.5rem;
@@ -16,58 +20,38 @@
   }
 
   &__form {
-    margin-top: 6.25rem;
-  }
-
-  &__form {
     padding: 2.5rem;
     border-radius: 8px;
     box-shadow: 0px 4px 4px rgba(73, 80, 87, 0.12);
     backdrop-filter: blur(40px);
     background: color(primary, 5);
   }
-}
 
-.gradient-blob {
-  position: absolute;
-  
-  &--1 {
-    top: 160px;
-    left: 20px;
-    width: 536px;
-    height: 418px;
-  }
+  @include breakpoint-down(mobile) {
+    &__header {
+      margin-bottom: 3.75rem;
+    }
 
-  &--2 {
-    top: -80px;
-    right: 0px;
-    width: 180px;
-    height: 154px;
-  }
+    &__heading {
+      margin-bottom: 1rem
+    }
 
-  &--3 {
-    bottom: -60px;
-    right: 0px;
-    width: 430px;
-    height: 424px;
-  }
-
-  &--4 {
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-30%);
+    &__subheading {
+      width: 100%;
+    }
   }
 }
 
 .result {
   position: relative;
+  padding-bottom: 7.625rem;
   margin-top: 5rem;
  
 
   &__header {
     position: relative;
     z-index: 100;
-    margin-bottom: 2.5rem;
+    margin-bottom: 5rem;
   }
 
   &__title {
@@ -109,7 +93,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 8px;
+    height: 6px;
     border-radius: 8px 8px 0px 0px;
     
 
@@ -135,6 +119,31 @@
   &__detail {
     margin-bottom: .75rem;
   }
+
+  &__hidden {
+    display: none;
+  }
+
+  @include breakpoint-down(mobile) {
+    padding-bottom: 5rem;
+    margin-top: 7.5rem;
+
+    &__grid {
+      grid-template-areas:
+        "monthly-payment monthly-payment monthly-payment"
+        "total-interest total-interest total-interest"
+        "total-amount total-amount total-amount"
+        "calc-input calc-input calc-input";
+    }
+
+    &__header {
+      margin-bottom: 3.75rem;
+    }  
+
+    &__content {
+      padding: 2.75rem 0 2.5rem 2.5rem;
+    }
+  }
 }
 
 .calc-input {
@@ -152,10 +161,87 @@
 
   &__title {
     padding: 0 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.75rem;
   }
 
   &__block {
     padding: 0 2.5rem;
   }
+
+  &__detail {
+    margin-bottom: .5rem;
+  }
+
+  &__spacer {
+    display: none;
+    width: 100%;
+  }
+
+  @include breakpoint-down(tablet) {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 0 2.5rem;
+    }
+
+    &__block {
+      padding: 0;
+    }
+
+    &__spacer {
+      display: revert;
+      width: 100%;
+    }
+  }
+}
+
+.gradient-blob {
+  position: absolute;
+  
+  &--1 {
+    top: 160px;
+    left: 20px;
+    width: 536px;
+    height: 418px;
+  }
+
+  &--2 {
+    top: -80px;
+    right: 0px;
+    width: 180px;
+    height: 154px;
+  }
+
+  &--3 {
+    bottom: -60px;
+    right: 0px;
+    width: 430px;
+    height: 424px;
+  }
+
+  &--4 {
+    top: 220px;
+    left: 0;
+  }
+
+  @include breakpoint-down(mobile) {
+    &--1 {
+      top: 200px;
+      left: 20px;
+    }
+
+    &--3 {
+      bottom: -120px;
+      right: 0px;
+    }
+
+    &--4 {
+      top: 120px;
+      left: 0;
+    }
+  }
+}
+
+.gray-spacer {
+  border: 1px solid color(primary, 6);
 }
