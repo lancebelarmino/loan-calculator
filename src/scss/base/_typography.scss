@@ -99,6 +99,7 @@ a {
 }
 
 
+
 // LAYOUTS
 // ----------------------------------------
 // 
@@ -162,10 +163,6 @@ a {
   &__link:hover {
     color: color(primary, 1);
   }
-
-  & .is-active {
-    color: color(primary, 1);
-  }
 }
 
 .mobile-menu {
@@ -178,10 +175,6 @@ a {
   }
 
   &__link:hover {
-    color: color(primary, 1);
-  }
-
-  & .is-active {
     color: color(primary, 1);
   }
 }
@@ -211,4 +204,13 @@ a {
   &__amount {
     color: color(primary, 1);
   }
+}
+
+
+
+// HELPERS
+// ----------------------------------------
+// 
+.is-active {
+  color: color(primary, 1);
 }
