@@ -1,6 +1,6 @@
 .loan {
   position: relative;
-  margin: 7.5rem 0 3.75rem 0;
+  padding: 7.5rem 0 120px 0;
 
   &__wrapper {
     position: relative;
@@ -199,21 +199,21 @@
   position: absolute;
   
   &--1 {
-    top: 160px;
+    top: 300px;
     left: 20px;
     width: 536px;
     height: 418px;
   }
 
   &--2 {
-    top: -80px;
+    top: 100px;
     right: 0px;
     width: 180px;
     height: 154px;
   }
 
   &--3 {
-    bottom: -60px;
+    top: 460px;
     right: 0px;
     width: 430px;
     height: 424px;
@@ -226,12 +226,17 @@
 
   @include breakpoint-down(mobile) {
     &--1 {
-      top: 200px;
-      left: 20px;
+      top: 220px;
+      left: 0px;
+    }
+
+    &--2 {
+      top: 20px;
+      right: 0px;
     }
 
     &--3 {
-      bottom: -120px;
+      top: 520px;
       right: 0px;
     }
 
