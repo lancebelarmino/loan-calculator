@@ -38,9 +38,9 @@ function displayResult() {
   const calcInputInterest = document.querySelector('#calcInputInterest');
   
 
-  resultMonthly.textContent = `$ ${result.totalPayment}`;
+  resultMonthly.textContent = `$ ${result.monthlyPayment}`;
   resultInterest.textContent = `$ ${result.totalInterest}`;
-  resultAmount.textContent = `$ ${result.monthlyPayment}`;
+  resultAmount.textContent = `$ ${result.totalPayment}`;
   calcInputTerm.textContent = `${result.loanTerm}  Years`;
   calcInputAmount.textContent = `$ ${result.loanAmount}`;
   calcInputInterest.textContent = `% ${result.interestRate}`;
